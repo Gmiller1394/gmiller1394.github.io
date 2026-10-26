@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Landing Page</title>
+    <link rel="stylesheet" href="indexStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<div class="wrapper" id="wrapper">
+    <aside class="sidebar sidebar-header">
+        <nav id="sidebar">
+            <h2>MENU<button id="sidebarHideBtn" class="menu-toggle"><i class="fas fa-bars"></i></button></h2>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="accordion">
+                        <i class="fa-solid fa-gauge sideLink"></i>Dashboard<i
+                            class="fas fa-chevron-right arrow-icon"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Site Traffic</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion"><i class="fa-solid fa-users sideLink"></i>Users<i
+                            class="fas fa-chevron-right arrow-icon"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">All Users</a></li>
+                        <li><a href="#">Add User</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion"><i class="fa-solid fa-shopping-bag sideLink"></i>Products<i
+                            class="fas fa-chevron-right arrow-icon"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Add Product</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion"><i class="fa-solid fa-cart-shopping sideLink"></i>Orders<i
+                            class="fas fa-chevron-right arrow-icon"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">All Orders</a></li>
+                        <li><a href="#">Pending Orders</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="accordion"><i class="fa-solid fa-gears sideLink"></i>Settings</a>
+                    <ul class="submenu">
+                        <li><a href="#">General Settings</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-content" id="mainContent">
+        <header>
+            <button id="sidebarShowBtn" class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <div class="user-actions">
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+        </header>
+        <main>
+            <!-- Draggable sections -->
+            <section class="panel" draggable="true">
+                <h2>Overview</h2>
+                <p>Welcome to the admin dashboard. Here you can manage users, products, orders, and settings.</p>
+            </section>
+            <section class="panel" draggable="true">
+                <h2>===============================================</h2>
+                <div class="metrics-grid">
+                    <div class="box">
+                        <h3>Total Users</h3>
+                        <p>100</p>
+                    </div>
+                    <div class="box">
+                        <h3>Total Products</h3>
+                        <p>50</p>
+                    </div>
+                    <div class="box">
+                        <h3>Total Orders</h3>
+                        <p>200</p>
+                    </div>
+                </div>
+            </section>
+            <section class="panel" draggable="true">
+                <h2>USERS</h2>
+                <div class="metrics-grid">
+                    <div class="box">
+                        <h3>Total Users</h3>
+                        <p>100</p>
+                    </div>
+                    <div class="box">
+                        <h3>Total Products</h3>
+                        <p>50</p>
+                    </div>
+                    <div class="box">
+                        <h3>Total Orders</h3>
+                        <p>200</p>
+                    </div>
+                </div>
+            </section>
+            <section class="panel" draggable="true">
+                <h2>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</h2>
+                <div class="metrics-grid">
+                    <div class="box">
+                        <h3>Total Users</h3>
+                        <p>100</p>
+                    </div>
+                    <div class="box">
+                        <h3>Total Products</h3>
+                        <p>50</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>

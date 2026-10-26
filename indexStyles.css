@@ -1,0 +1,264 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+}
+
+/* Sidebar */
+#sidebar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.sidebar ul.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul.menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul.menu li a:hover {
+    background-color: #555;
+}
+
+.sideLink {
+    padding-right: 10px;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 25px; /* Adjust as needed */
+}
+
+/* Menu/Submenu of Sidebar */
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.submenu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+.active-menu-button {
+    background-color: #555555 !important;
+}
+
+/* Media Query for Responsive Design (Hide menu on certain screen size like mobile) */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px; /* Adjusted to accommodate fixed sidebar */
+}
+
+/* User Actions (Profile, Settings) */
+.user-actions {
+    margin-left: auto; /* Push user-actions to the right */
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px; /* Add some spacing between buttons */
+}
+
+.user-actions a:hover {
+    text-decoration: underline;
+}
+
+/* Section within main panel for metrics */
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.h2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.box h3 {
+    margin-top: 0;
+}
+
+.panel h2 {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    word-break: break-all;
+    hyphens: auto;
+    color: #333;
+}
+
+.box p {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.panel.over {
+    border: 3px dotted #666;
+}
+
+.panel {
+    border-radius: .5em;
+    padding: 10px;
+    cursor: move;
+}
+
+/* Header on the main section*/
+.overview h2,
+.panel h2 {
+    margin-top: 0;
+}
+
+/* Slide screen over when sidebar is hidden*/
+.sidebar-hidden {
+    transform: translateX(-250px);
+    width: calc(250px + 100%)
+}
+
+#wrapper.sidebar-hidden #sidebar {
+    display: none;
+}
+
+#sidebarShowBtn {
+    padding-top: 20px;
+    background-color: transparent;
+    border: none;
+    color: #343a40;
+    cursor: pointer;
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+}
+
+.sidebar-visible {
+    left: .01%;
+}
+
+#sidebarHideBtn {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em;
+    position: relative;
+    float: right;
+}
